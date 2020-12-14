@@ -5,6 +5,11 @@
 <link rel="stylesheet" href="{{ "/dist/index.css" | relative_url }}">
 <link rel="shortcut icon" type="image/png" href={{ "/assets/favicon.ico" | relative_url }}>
 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
 <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
 <meta itemprop="description" name="description"
     content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />

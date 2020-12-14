@@ -1,7 +1,7 @@
 google_analytics:
 
-title: Your site title
-description: Your site description
+title: Elements
+description: Elements is a simple, speedy, spell-slinging party game for 2-8 players
 
 plugins:
   - jekyll-seo-tag

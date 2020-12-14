@@ -1,0 +1,134 @@
+<!-- todo: elements hover and click, socials, tabindex of hidden menu items should be -1, else 0 -->
+<!-- rendered box on right with text and CTA button(s) on left, scroll for more, top links to stuff on page, CTA for other pages -->
+<nav class="w-full border-b-2 border-black dark:border-white text-lg fixed top-0 bg-white dark:bg-black bg-opacity-50">
+	<div class="py-4">	
+		<a style="font-family: Arvo;" class="tracking-widest mx-4 pointer hover:italic">ELEMENTS</a>
+		<a class="hidden sm:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="/#home">1. Home</a>
+		<a class="hidden sm:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">2. Gameplay</a>
+		<a class="hidden md:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">3. Design</a>
+		<a class="hidden md:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">4. Contents</a>
+		<a class="hidden lg:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">5. Pricing</a>
+		<a class="hidden lg:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">6. Contact</a>
+
+		<div class="float-right m-0 p-0 lg:hidden">
+			<a id="nav-link" class="text-center p-4 hover:bg-gray-700 cursor-pointer" tabindex="0">
+				<div id="nav-icon" class="inline-block w-4">
+					<div></div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div id="menu" class="w-full h-full">
+		<a class="block sm:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="/#home">1. Home</a>
+		<a class="block sm:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="">2. Gameplay</a>
+		<a class="block md:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="">3. Design</a>
+		<a class="block md:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="">4. Contents</a>
+		<a class="block lg:hidden text-center py-4 hover:bg-gray-700  hover:text-white block" href="">5. Pricing</a>
+		<a class="block lg:hidden text-center py-4 hover:bg-gray-700  hover:text-white block" href="">6. Contact</a>
+	</div>
+</nav>
+
+<style type="text/css">
+	html {
+		scroll-behavior: smooth;
+	}
+	nav {
+		z-index: 1;
+	}
+	#nav-icon:after, 
+	#nav-icon:before, 
+	#nav-icon div {
+		background-color: black !important;
+		content: '';
+		display: block;
+		height: 2px;
+		margin: 4px 0;
+		transition: transform .25s ease-in-out;
+	}
+
+	.dark #nav-icon:after, 
+	.dark #nav-icon:before, 
+	.dark #nav-icon div,
+	#nav-link:hover #nav-icon:after, 
+	#nav-link:hover #nav-icon:before, 
+	#nav-link:hover #nav-icon div {
+		background-color: white !important;
+	}
+
+	#nav-icon.open:before {
+		transform: translateY(6px) rotate(135deg);
+	}
+
+	#nav-icon.open:after {
+		transform: translateY(-6px) rotate(-135deg);
+	}
+
+	#nav-icon.open div {
+		transform: scale(0);
+	}
+
+	#menu {
+		transition: max-height 0.25s linear, opacity 0.25s linear;
+		max-height: 0px;
+		overflow: hidden;
+		opacity: 0;
+	}
+	#menu.open {
+		max-height: 360px;
+		opacity: 1;
+	}
+
+
+	/*'sm': '640px',*/
+	@media (min-width: 640px) {
+		#menu.open {
+			max-height: 240px;
+		}
+	}
+
+	/*'md': '768px',*/
+	@media (min-width: 768px) {
+		#menu.open {
+			max-height: 120px;
+		}
+	}
+
+	/*'lg': '1024px',*/
+	@media (min-width: 1024px) {
+
+	}
+
+	/*'xl': '1280px',*/
+	@media (min-width: 1280px) {
+
+	}
+
+	/*'2xl': '1536px',*/
+	@media (min-width: 1536px) {
+
+	}
+
+
+	/*240, 360*/
+</style>
+
+
+<script type="text/javascript">
+	let nav_link = document.getElementById('nav-link');
+	let nav_icon = document.getElementById('nav-icon');
+	let menu = document.getElementById('menu');
+
+	nav_link.onclick = function() {
+		nav_icon.classList.toggle('open');
+		menu.classList.toggle('open');
+		// menu.classList.toggle('hidden');
+	}
+
+	nav_link.addEventListener('keyup', function(event) {
+		if (event.keyCode === 13) { // enter
+			event.preventDefault();
+			nav_link.click();
+		}
+	});
+</script>

@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html class="dark" lang="{{ site.lang | default: "en-US" }}">
 
 <head>
     {% include head.html %}
 </head>
 
-<body class="antialiased text-gray-900 min-h-screen">
+{% include header.html %}
+<div class="h-16"></div> <!-- offset the nav -->
+
+<!-- <div class="toggle__container">
+    <input checked type="checkbox" id="darkmode-toggle" class="toggle__checkbox"/>
+    <label class="toggle__bg"></label>
+</div>
+<label for="darkmode-toggle" class="toggle__label">Dark Mode</label> -->
+
+<body class="antialiased bg-white text-black dark:bg-black dark:text-white min-h-screen">
+<!-- <body class="antialiased min-h-screen"> -->
     {{ content }}
     {% include scripts.html %}
 </body>

@@ -4,8 +4,8 @@
 	<div class="py-4">	
 		<a style="font-family: Arvo;" class="tracking-widest mx-4 pointer hover:italic">ELEMENTS</a>
 		<a class="hidden sm:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="/#home">1. Home</a>
-		<a class="hidden sm:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">2. Gameplay</a>
-		<a class="hidden md:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">3. Design</a>
+		<a class="hidden sm:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="/#gameplay">2. Gameplay</a>
+		<a class="hidden md:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="/#design">3. Design</a>
 		<a class="hidden md:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">4. Contents</a>
 		<a class="hidden lg:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">5. Pricing</a>
 		<a class="hidden lg:inline text-center p-4 hover:bg-gray-700 hover:text-white" href="">6. Contact</a>
@@ -21,8 +21,8 @@
 
 	<div id="menu" class="w-full h-full">
 		<a class="block sm:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="/#home">1. Home</a>
-		<a class="block sm:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="">2. Gameplay</a>
-		<a class="block md:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="">3. Design</a>
+		<a class="block sm:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="/#gameplay">2. Gameplay</a>
+		<a class="block md:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="/#design">3. Design</a>
 		<a class="block md:hidden text-center p-4 hover:bg-gray-700 hover:text-white" href="">4. Contents</a>
 		<a class="block lg:hidden text-center py-4 hover:bg-gray-700  hover:text-white block" href="">5. Pricing</a>
 		<a class="block lg:hidden text-center py-4 hover:bg-gray-700  hover:text-white block" href="">6. Contact</a>
@@ -119,16 +119,29 @@
 	let nav_icon = document.getElementById('nav-icon');
 	let menu = document.getElementById('menu');
 
+	// make button toggle nav
 	nav_link.onclick = function() {
 		nav_icon.classList.toggle('open');
 		menu.classList.toggle('open');
-		// menu.classList.toggle('hidden');
 	}
 
+	// click button when focused and enter or space are pressed
+	// close nav when esc is pressed when focusing button
 	nav_link.addEventListener('keyup', function(event) {
-		if (event.keyCode === 13) { // enter
+		if (event.keyCode === 13 || event.keyCode === 32) { // enter or space
 			event.preventDefault();
 			nav_link.click();
+		} else if(event.keyCode == 27) {
+			nav_icon.classList.remove('open');
+			menu.classList.remove('open');
+		}
+	});
+
+	// close nav when link to a section is clicked
+	document.querySelectorAll('nav a[href*=\'#\']').forEach( function(elm) {
+		elm.onclick = function() {
+			nav_icon.classList.remove('open');
+			menu.classList.remove('open');
 		}
 	});
 </script>

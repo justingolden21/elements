@@ -29,6 +29,9 @@
     h1, h2, h3, h4 {
         font-family: Arvo;
     }
+    hr {
+        border-color: white !important;
+    }
 }
 @layer components {
 
@@ -81,16 +84,16 @@
     }
 
     ::-moz-selection {
-      background: #ed1b31;
+      background: #f7941d;
     }
     ::selection {
       background: #f7941d;
     }
     input::-moz-selection {
-      background: #ed1b31;
+      background: #f7941d;
     }
     input::selection {
-      background: #ed1b31;
+      background: #f7941d;
     }
 }
 

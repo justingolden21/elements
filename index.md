@@ -155,7 +155,7 @@ https://tailwindcomponents.com/component/toggle-switch
       <!-- <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"> -->
     </div>
     <div class="mx-4 lg:flex-grow md:w-1/2 lg:pl-16 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center">
-      <h1 class="sm:text-3xl text-2xl mb-4"><spam style="font-family: Arvo; font-weight: normal;" class="tracking-widest">ELEMENTS</spam>
+      <h1 class="sm:text-3xl text-2xl mb-4"><span style="font-family: Arvo; font-weight: normal;" class="tracking-widest">ELEMENTS</span>
         <br class="hidden lg:inline-block">is a simple, speedy, spell-slinging party game
       </h1>
       <p class="mb-8 leading-relaxed font-thin text-left">Take part in a one-of-a-kind battle royale experience for 2-8 players. Play begins by dealing 4 cards to each player. Players pick 1 card to keep and pass the remaining cards. Once players have selected their hands, they battle it out by casting the spells they selected to blast their enemies with fire, heal with water, craft gems, or counter or reflect the opposition with electricity. Win by being the last one standing, or reaching 20 gems first; the choice is yours. <br><a href=""><i class="fab fa-youtube"></i> Learn to play in 3 min.</a></p>
@@ -167,6 +167,20 @@ https://tailwindcomponents.com/component/toggle-switch
       </div>
     </div>
   </div>
+</section>
+
+<hr>
+
+<section id="gameplay" class="mx-4">
+	<h1 class="text-center sm:text-3xl text-2xl mb-4">Gameplay</h1>
+	<p class="mb-8 leading-relaxed font-thin text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sollicitudin turpis. Integer congue faucibus ipsum, non commodo odio porta id. Praesent magna ipsum, tincidunt at viverra non, sollicitudin ut neque. Donec id erat nec erat interdum blandit vitae eget nulla. Nam porttitor condimentum ipsum id sollicitudin. Sed ac diam sed mi rutrum tincidunt. Ut vitae venenatis dolor. Quisque et interdum nunc, eu malesuada sem. Quisque volutpat dui sit amet ante pretium, quis finibus urna sagittis. Vivamus lorem justo, consequat imperdiet ullamcorper sed, tristique vel lacus. Vivamus est quam, dictum eget arcu dictum, vulputate cursus urna. Vivamus porta nisi arcu, ac tempus turpis tempus ac. Sed in quam mauris. Praesent dolor risus, aliquam eu nulla eget, semper porta dolor. Curabitur ut diam feugiat, tristique libero at, suscipit nunc.</p>
+</section>
+
+<hr>
+
+<section id="design" class="mx-4">
+	<h1 class="text-center sm:text-3xl text-2xl mb-4">Design</h1>
+	<p class="mb-8 leading-relaxed font-thin text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sollicitudin turpis. Integer congue faucibus ipsum, non commodo odio porta id. Praesent magna ipsum, tincidunt at viverra non, sollicitudin ut neque. Donec id erat nec erat interdum blandit vitae eget nulla. Nam porttitor condimentum ipsum id sollicitudin. Sed ac diam sed mi rutrum tincidunt. Ut vitae venenatis dolor. Quisque et interdum nunc, eu malesuada sem. Quisque volutpat dui sit amet ante pretium, quis finibus urna sagittis. Vivamus lorem justo, consequat imperdiet ullamcorper sed, tristique vel lacus. Vivamus est quam, dictum eget arcu dictum, vulputate cursus urna. Vivamus porta nisi arcu, ac tempus turpis tempus ac. Sed in quam mauris. Praesent dolor risus, aliquam eu nulla eget, semper porta dolor. Curabitur ut diam feugiat, tristique libero at, suscipit nunc.</p>
 </section>
 
 

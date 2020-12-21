@@ -27,7 +27,19 @@ Minimal boilerplate for [Jekyll](https://jekyllrb.com/) sites and [Tailwind CSS]
     -webkit-animation: rotateBox 5s infinite;
     -moz-animation: rotateBox 5s infinite;
     animation: rotateBox 5s infinite;
+	/*animation-play-state: paused;*/
 }
+
+#box-element:hover {
+	/*animation-duration: 10s;*/
+	/*animation-play-state: paused;*/
+	/*animation-play-state: running;*/
+}
+
+#box-element:hover .face {
+	box-shadow: 0px 0px 36px #ffffff99;
+}
+
 @-webkit-keyframes rotateBox { 100% { -webkit-transform: rotate3d(1, 1, 0, 360deg); } }
 @-moz-keyframes rotateBox { 100% { -moz-transform: rotate3d(1, 1, 0, 360deg); } }
 @keyframes rotateBox { 100% { transform: rotate3d(1, 1, 0, 360deg); } }
@@ -38,6 +50,8 @@ Minimal boilerplate for [Jekyll](https://jekyllrb.com/) sites and [Tailwind CSS]
     position: absolute;
     backface-visibility: inherit;
     border: 2px solid white;
+
+    filter: brightness(1.5);
 }
 
 .front, .back {
@@ -140,6 +154,7 @@ https://tailwindcomponents.com/component/toggle-switch
  -->
 
 <section id="home">
+  <br><br>
   <div class="flex md:flex-row flex-col items-center md:items-start">
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10 mt-10 items-center">
     	<div class="w-full text-center">
@@ -154,31 +169,32 @@ https://tailwindcomponents.com/component/toggle-switch
     	</div>
       <!-- <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"> -->
     </div>
-    <div class="mx-4 lg:flex-grow md:w-1/2 lg:pl-16 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center">
+    <div class="mx-2 lg:flex-grow md:w-1/2 lg:pl-8 md:pl-4 flex flex-col md:items-start md:text-left items-center text-center">
       <h1 class="sm:text-3xl text-2xl mb-4"><span style="font-family: Arvo; font-weight: normal;" class="tracking-widest">ELEMENTS</span>
         <br class="hidden lg:inline-block">is a simple, speedy, spell-slinging party game
       </h1>
-      <p class="mb-8 leading-relaxed font-thin text-left">Take part in a one-of-a-kind battle royale experience for 2-8 players. Play begins by dealing 4 cards to each player. Players pick 1 card to keep and pass the remaining cards. Once players have selected their hands, they battle it out by casting the spells they selected to blast their enemies with fire, heal with water, craft gems, or counter or reflect the opposition with electricity. Win by being the last one standing, or reaching 20 gems first; the choice is yours. <br><a href=""><i class="fab fa-youtube"></i> Learn to play in 3 min.</a></p>
+      <p class="mb-8 leading-relaxed font-thin text-left"><b class="text-2xl">T</b>ake part in a one-of-a-kind battle royale experience for 2-8 players. Play begins by dealing 4 cards to each player. Players pick 1 card to keep and pass the remaining cards. Once players have selected their hands, they battle it out by casting the spells they selected to blast their enemies with fire, heal with water, craft gems, or counter or reflect the opposition with electricity. Win by being the last one standing, or reaching 20 gems first; the choice is yours. <br><a href=""><i class="fab fa-youtube"></i> Learn to play in 3 min.</a></p>
       <div class="flex justify-center">
         <!-- <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> -->
         <!-- <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Button</button> -->
-        <button class="btn kickstarter"><i class="fab fa-kickstarter"></i> Kickstarter</button>
-        <button class="btn"><i class="fas fa-book-open"></i> Learn More</button>
+        <button class="btn m-2 kickstarter"><i class="fab fa-kickstarter-k"></i> Kickstarter</button>
+        <button class="btn m-2"><i class="fas fa-book-open"></i> Learn More</button>
+        <button class="btn m-2"><i class="fas fa-share"></i> Share</button>
       </div>
     </div>
   </div>
 </section>
 
-<hr>
-
 <section id="gameplay" class="mx-4">
+	<br>
+	<hr>
 	<h1 class="text-center sm:text-3xl text-2xl mb-4">Gameplay</h1>
 	<p class="mb-8 leading-relaxed font-thin text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sollicitudin turpis. Integer congue faucibus ipsum, non commodo odio porta id. Praesent magna ipsum, tincidunt at viverra non, sollicitudin ut neque. Donec id erat nec erat interdum blandit vitae eget nulla. Nam porttitor condimentum ipsum id sollicitudin. Sed ac diam sed mi rutrum tincidunt. Ut vitae venenatis dolor. Quisque et interdum nunc, eu malesuada sem. Quisque volutpat dui sit amet ante pretium, quis finibus urna sagittis. Vivamus lorem justo, consequat imperdiet ullamcorper sed, tristique vel lacus. Vivamus est quam, dictum eget arcu dictum, vulputate cursus urna. Vivamus porta nisi arcu, ac tempus turpis tempus ac. Sed in quam mauris. Praesent dolor risus, aliquam eu nulla eget, semper porta dolor. Curabitur ut diam feugiat, tristique libero at, suscipit nunc.</p>
 </section>
 
-<hr>
-
 <section id="design" class="mx-4">
+	<br>
+	<hr>
 	<h1 class="text-center sm:text-3xl text-2xl mb-4">Design</h1>
 	<p class="mb-8 leading-relaxed font-thin text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sollicitudin turpis. Integer congue faucibus ipsum, non commodo odio porta id. Praesent magna ipsum, tincidunt at viverra non, sollicitudin ut neque. Donec id erat nec erat interdum blandit vitae eget nulla. Nam porttitor condimentum ipsum id sollicitudin. Sed ac diam sed mi rutrum tincidunt. Ut vitae venenatis dolor. Quisque et interdum nunc, eu malesuada sem. Quisque volutpat dui sit amet ante pretium, quis finibus urna sagittis. Vivamus lorem justo, consequat imperdiet ullamcorper sed, tristique vel lacus. Vivamus est quam, dictum eget arcu dictum, vulputate cursus urna. Vivamus porta nisi arcu, ac tempus turpis tempus ac. Sed in quam mauris. Praesent dolor risus, aliquam eu nulla eget, semper porta dolor. Curabitur ut diam feugiat, tristique libero at, suscipit nunc.</p>
 </section>

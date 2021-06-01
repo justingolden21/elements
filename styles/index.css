@@ -29,9 +29,43 @@
     h1, h2, h3, h4 {
         font-family: Arvo;
     }
+    .dropcap {
+        font-family: Arvo;
+        @apply text-3xl;
+        padding-right: 0.125rem;
+    }
     hr {
         border-color: white !important;
     }
+
+    #hero-text {
+        animation: clipIn 1.75s linear;
+        animation-delay: 0.5s;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        animation-fill-mode: forwards;
+    }
+    body {
+        animation: fadeIn 1s linear;
+        animation-fill-mode: forwards;
+    }
+    @keyframes clipIn {
+        0% {
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+        100% {
+            /*has to be larger than 100% for descenders in type */
+            clip-path: polygon(0 0, 100% 0, 100% 110%, 0% 110%);
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
 }
 @layer components {
 
@@ -98,6 +132,13 @@
     }
     input::selection {
       background: #f7941d;
+    }
+
+    br, img, nav {
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
     }
 }
 

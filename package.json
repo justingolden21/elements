@@ -7,6 +7,7 @@
         "setup": "gem install bundler && bundle install && npm i",
         "start": "concurrently --kill-others \"npm run css:dev\" \"jekyll serve\"",
         "build": "npm run css:rel && jekyll build",
+        "preview": "npm run build && cd _site && start chrome --new-tab \"http://localhost:8000/\" && py -m http.server",
         "css:dev": "parcel watch styles/index.css --no-source-maps",
         "css:rel": "parcel build styles/index.css --no-source-maps"
     },
@@ -17,7 +18,6 @@
         "parcel-bundler": "^1.12.4",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1"
     },
-    "dependencies": {},
     "resolutions": {
         "node-forge": "0.10.0"
     }

@@ -1,6 +1,3 @@
-/* Syntax highlighting
- * https://jwarby.github.io/jekyll-pygments-themes/languages/java.html */
-@import "./syntax.css";
 
 @tailwind base;
 @tailwind components;
@@ -30,40 +27,32 @@
         font-family: Arvo;
     }
     .dropcap {
-        font-family: Arvo;
+        /*font-family: Arvo;*/
         @apply text-3xl;
-        padding-right: 0.125rem;
+        /*padding-right: 0.125rem;*/
     }
     hr {
         border-color: white !important;
     }
-
-    #hero-text {
-        animation: clipIn 1.75s linear;
-        animation-delay: 0.5s;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        animation-fill-mode: forwards;
+    .elements {
+        font-family: Arvo;
+        font-weight: normal;
+        @apply tracking-widest;
     }
-    body {
-        animation: fadeIn 1s linear;
-        animation-fill-mode: forwards;
+    details {
+        color: white;
+        font-weight: inherit;
     }
-    @keyframes clipIn {
-        0% {
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        }
-        100% {
-            /*has to be larger than 100% for descenders in type */
-            clip-path: polygon(0 0, 100% 0, 100% 110%, 0% 110%);
-        }
+    details summary {
+        cursor: pointer;
+        margin-bottom: 0.25rem;
     }
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
+    details[open] summary ~ * {
+        animation: sweep 0.5s linear;
+    }
+    @keyframes sweep {
+        0% { opacity: 0; margin-left: -12px; }
+        100% { opacity: 1; margin-left: 0px; }
     }
 
 }

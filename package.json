@@ -1,7 +1,7 @@
 {
-    "name": "your.repo.name",
+    "name": "Elements",
     "version": "0.0.1",
-    "description": "Your repo description",
+    "description": "Elements is a simple, speedy, spell-slinging party game for 2-8 players",
     "scripts": {
         "preinstall": "npx npm-force-resolutions",
         "setup": "gem install bundler && bundle install && npm i",

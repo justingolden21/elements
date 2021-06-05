@@ -104,6 +104,36 @@ Minimal boilerplate for [Jekyll](https://jekyllrb.com/) sites and [Tailwind CSS]
     transform: rotateX(-90deg) translateZ(186px); /*230-43=187, 186 works better though*/
 }
 
+
+
+#hero-text {
+    animation: clipIn 2.5s linear;
+    animation-delay: 1.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    animation-fill-mode: forwards;
+}
+body {
+    animation: fadeIn 1s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes clipIn {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    100% {
+        /*has to be larger than 100% for descenders in type */
+        clip-path: polygon(0 0, 100% 0, 100% 110%, 0% 110%);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 </style>
 
 <!-- replace box with still image for mobile? -->
@@ -155,6 +185,10 @@ page for variants: elements.website/variants, linked to in rules
 
 insert images under gameplay and design
 
+add more interesting btn icon hover effects (get users to click kickstarter btn)
+
+use heroicons for non brands, download brand fontawesome icons
+
 https://tailwindcomponents.com/component/toggle-switch
 
  -->
@@ -176,7 +210,7 @@ https://tailwindcomponents.com/component/toggle-switch
       <!-- <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"> -->
     </div>
     <div class="mx-2 lg:flex-grow md:w-1/2 lg:pl-8 md:pl-4 flex flex-col md:items-start md:text-left items-center text-center">
-      <h1 id="hero-text" class="sm:text-3xl text-2xl mb-4" style="line-height: 1.25;"><span style="font-family: Arvo; font-weight: normal;" class="tracking-widest">ELEMENTS</span>
+      <h1 id="hero-text" class="sm:text-3xl text-2xl mb-4" style="line-height: 1.25;"><span class="elements">ELEMENTS</span>
         <br class="hidden lg:inline-block">is a simple, speedy, spell-slinging party game
       </h1>
       <p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">T</b>ake part in a one-of-a-kind battle royale experience for 2-8 players. Play begins by dealing 4 cards to each player. Players pick 1 card to keep and pass the remaining cards. Once players have selected their hands, they battle it out by casting the spells they selected to blast their enemies with fire, heal with water, craft gems, or counter or reflect the opposition with electricity. Win by being the last one standing, or reaching 20 gems first; the choice is yours. <br><a href=""><i class="fab fa-youtube"></i> Learn to play in 3 min.</a></p>
@@ -195,7 +229,12 @@ https://tailwindcomponents.com/component/toggle-switch
 	<br>
 	<hr>
 	<h1 class="text-center sm:text-3xl text-2xl mb-4">Gameplay</h1>
-	<p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">L</b>orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sollicitudin turpis. Integer congue faucibus ipsum, non commodo odio porta id. Praesent magna ipsum, tincidunt at viverra non, sollicitudin ut neque. Donec id erat nec erat interdum blandit vitae eget nulla. Nam porttitor condimentum ipsum id sollicitudin. Sed ac diam sed mi rutrum tincidunt. Ut vitae venenatis dolor. Quisque et interdum nunc, eu malesuada sem. Quisque volutpat dui sit amet ante pretium, quis finibus urna sagittis. Vivamus lorem justo, consequat imperdiet ullamcorper sed, tristique vel lacus. Vivamus est quam, dictum eget arcu dictum, vulputate cursus urna. Vivamus porta nisi arcu, ac tempus turpis tempus ac. Sed in quam mauris. Praesent dolor risus, aliquam eu nulla eget, semper porta dolor. Curabitur ut diam feugiat, tristique libero at, suscipit nunc.</p>
+    <!-- add many instructional images -->
+	<p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">E</b>ach player starts with 20 life and 0 gems. If you reach 20 gems, you win the game. If you run out of life, you lose the game. Be the last one standing or the first to 20 gems to claim victory. The Elements deck is a deck of 80 spells. There are four elements: fire, water, gem, and electric. Fire spells deal damage. Water spells heal damage. Gem spells craft gems. Electric spells counter other spells. Master the elements to emerge victorious. Each spell has a power and a target. The power determines the size of the effect, and the target determines who is affected. Each round, players select spells, then take turns casting one spell per turn or passing the turn. When all players have passed the turn in a row, the round ends and a new round begins. Rounds continue until a player wins the game. <br><br> During selection, each player sets aside their previous hand, then draws 4 cards. They chose 2 to keep and 2 to pass (clockwise). Players then combine these cards with their previous hand, and discard down to 4 cards. After selection, players can elect to purchase a Great Spell for 8 gems. A player can only purchase one Great Spell per game, and Great Spells do not take up hand space. After selection, players cast their spells. Each player may cast up to one spell per turn. <br><br> You can combine and overpower spells of the same element type. You may combine multiple spells of the same element into a single spell. When doing this, combine their power and select any target from among those spells. You may overpower a spell by responding immediately after it was cast by casting another spell of the same element type and greater power. This negates the previous spell and casts your spell.
+
+    <br><br>Games are fast-paced and exciting, with each player trying to anticipate their opponents and adapt their strategy as the game evolves. Utilize your resources efficiently, predict your opponents, and select the right cards to survive.
+
+    <br><details class="text-sm font-thin"><summary>Footnotes</summary> Determining who goes first: Randomly determine the starting player for the first round. Future rounds start with the first player to pass. Discarding: players secretly discard, then reveal their discarded cards. Running out of cards: If the deck runs out of cards, shuffle the discard pile into the deck. Ties: If multiple players reach 20 gems at the same time, the player with the greatest gem total wins. If there is a tie, the player with the greatest life wins. If there is a tie, all tied players win. If multiple players reach 0 life at the same time, players lose clockwise starting with the caster. Priority for responding to spells: priority for responding to spells goes clockwise starting from the caster. If a player responds, priority for responding to that goes clockwise from the player who cast the response. Spells can only affect the most recently cast spell. Great Spells: (Great Spells are revealed. A player cannot purchase a Great Spell another player controls. Upon casting a Great Spell, the player then returns it to the center. If a player loses the game, their Great Spell returns to the center. Priority for purchasing a Great Spell goes clockwise starting with the player who will start the round (the player who passed first).</details></p>
 </section>
 
 <section id="design" class="mx-4">
@@ -204,70 +243,6 @@ https://tailwindcomponents.com/component/toggle-switch
 	<h1 class="text-center sm:text-3xl text-2xl mb-4">Design</h1>
 	<p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">L</b>orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sollicitudin turpis. Integer congue faucibus ipsum, non commodo odio porta id. Praesent magna ipsum, tincidunt at viverra non, sollicitudin ut neque. Donec id erat nec erat interdum blandit vitae eget nulla. Nam porttitor condimentum ipsum id sollicitudin. Sed ac diam sed mi rutrum tincidunt. Ut vitae venenatis dolor. Quisque et interdum nunc, eu malesuada sem. Quisque volutpat dui sit amet ante pretium, quis finibus urna sagittis. Vivamus lorem justo, consequat imperdiet ullamcorper sed, tristique vel lacus. Vivamus est quam, dictum eget arcu dictum, vulputate cursus urna. Vivamus porta nisi arcu, ac tempus turpis tempus ac. Sed in quam mauris. Praesent dolor risus, aliquam eu nulla eget, semper porta dolor. Curabitur ut diam feugiat, tristique libero at, suscipit nunc.</p>
 </section>
-
-
-
-
-<!-- 
-<script type="text/javascript">
-
-// https://threejs.org/docs/#api/en/textures/CubeTexture
-// https://medium.com/@necsoft/three-js-101-hello-world-part-1-443207b1ebe1
-
-let scene = new THREE.Scene();
-
-let camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-camera.position.z = 4;
-
-let renderer = new THREE.WebGLRenderer({antialias:true});
-renderer.setClearColor('#000');
-renderer.setSize(window.innerWidth, window.innerHeight);
-
-document.body.appendChild(renderer.domElement);
-
-// ------------------------------------------------
-
-// const loader = new THREE.CubeTextureLoader();
-// loader.setPath('assets/img/box/');
-// const textureCube = loader.load([
-// 	'top.png', 'bottom.png',
-// 	'long-left.png', 'long-right.png',
-// 	'short-bottom.png', 'short-top.png'
-// ]);
-// textureCube.minFilter = THREE.LinearFilter; // or NearestFilter https://stackoverflow.com/questions/29421702/threejs-texture
-
-
-let loader = new THREE.TextureLoader();
-loader.setPath('assets/img/box/');
-// https://stackoverflow.com/questions/35877484/three-js-using-cubetextureloader-to-create-a-different-image-on-each-face-of-a
-let materials = [
-    new THREE.MeshBasicMaterial( { map: loader.load("top.png") } ),
-    new THREE.MeshBasicMaterial( { map: loader.load("bottom.png") } ),
-    new THREE.MeshBasicMaterial( { map: loader.load("long-right.png") } ),
-    new THREE.MeshBasicMaterial( { map: loader.load("long-left.png") } ),
-    new THREE.MeshBasicMaterial( { map: loader.load("short-top.png") } ),
-    new THREE.MeshBasicMaterial( { map: loader.load("short-bottom.png") } ),
-];
-
-
-const geometry = new THREE.BoxGeometry(1, 0.7, 0.5);
-const material = new THREE.MeshBasicMaterial( { color: '#433F81', /*envMap: textureCube*/ } );
-let cube = new THREE.Mesh(geometry, materials);
-
-scene.add(cube);
-
-const render = ()=> {
-	requestAnimationFrame(render);
-	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
-
-	renderer.render(scene, camera);
-};
-render();
-</script>
-
- -->
-
 
 <!-- ## Pages
 
@@ -284,6 +259,3 @@ render();
 ---
 
 -->
- 
-
-

@@ -322,6 +322,7 @@ https://tailwindcomponents.com/component/toggle-switch
       stroke-dasharray:500;
       stroke-dashoffset:0;
       fill: none;
+      opacity: 0;
 
       animation-play-state: paused;
     }

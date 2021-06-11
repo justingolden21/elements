@@ -287,7 +287,6 @@ https://tailwindcomponents.com/component/toggle-switch
 	<hr>
 	<h1 class="text-center sm:text-3xl text-2xl mb-4">Design</h1>
 
-    <!-- <img src="assets/img/animated_cardback.svg"> -->
     <div class="w-96 mx-auto">
     <svg id="animated-cardback" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 252">
     <style>
@@ -300,7 +299,7 @@ https://tailwindcomponents.com/component/toggle-switch
 
     circle:not(#bigCircle) {
       animation: drawSmall 2s ease-in-out 0s forwards;
-      animation-delay: 3.5s;
+      animation-delay: 3s;
       stroke-dasharray:50;
       stroke-dashoffset:50;
       fill: none;
@@ -309,7 +308,6 @@ https://tailwindcomponents.com/component/toggle-switch
     }
     #fire {
       animation: drawMed 4s ease-in-out 0s forwards;
-      animation-delay: 1s;
       stroke-dasharray:200;
       stroke-dashoffset:200;
       fill: none;
@@ -318,17 +316,15 @@ https://tailwindcomponents.com/component/toggle-switch
     }
     ellipse {
       animation: drawBig 5s ease-in-out 0s forwards;
-      animation-delay: 1s;
       stroke-dasharray:500;
       stroke-dashoffset:0;
       fill: none;
-      opacity: 0;
 
       animation-play-state: paused;
     }
     text, #border {
       animation: fadeIn 2s ease-in-out 0s forwards;
-      animation-delay: 4s;
+      animation-delay: 3.5s;
       opacity: 0;
 
       animation-play-state: paused;

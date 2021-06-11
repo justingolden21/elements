@@ -75,9 +75,15 @@
         @apply bg-yellow-700 border-yellow-900 hover:bg-yellow-600 hover:border-yellow-700;
     }
     .btn.kickstarter {
-        background-color: #05ce78;
+        /*background-color: #05ce78;*/
+        background-color: #000;
+        /*border: 0.25rem solid white;*/
+        border: 0.25rem solid #05ce78;
+        font-weight: 900;
+        color: #05ce78;
     }
     .btn.kickstarter:hover, .btn.kickstarter:active {
+        color: #fff;
         background-color: #04ae65;
     }
 /*    .btn:active, .btn.yellow:active {

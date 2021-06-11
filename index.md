@@ -218,7 +218,7 @@ https://tailwindcomponents.com/component/toggle-switch
         <!-- <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> -->
         <!-- <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Button</button> -->
         <button class="btn m-2 kickstarter"><i class="fab fa-kickstarter-k"></i> <br>Kickstarter</button>
-        <button class="btn m-2"><i class="fas fa-book-open"></i> <br>Learn More</button>
+        <!-- <button class="btn m-2"><i class="fas fa-book-open"></i> <br>Learn More</button> -->
         <button class="btn m-2"><i class="fas fa-share"></i> <br>Share</button>
       </div>
     </div>

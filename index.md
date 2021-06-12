@@ -419,6 +419,9 @@ https://tailwindcomponents.com/component/toggle-switch
 	<p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">L</b>orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sollicitudin turpis. Integer congue faucibus ipsum, non commodo odio porta id. Praesent magna ipsum, tincidunt at viverra non, sollicitudin ut neque. Donec id erat nec erat interdum blandit vitae eget nulla. Nam porttitor condimentum ipsum id sollicitudin. Sed ac diam sed mi rutrum tincidunt. Ut vitae venenatis dolor. Quisque et interdum nunc, eu malesuada sem. Quisque volutpat dui sit amet ante pretium, quis finibus urna sagittis. Vivamus lorem justo, consequat imperdiet ullamcorper sed, tristique vel lacus. Vivamus est quam, dictum eget arcu dictum, vulputate cursus urna. Vivamus porta nisi arcu, ac tempus turpis tempus ac. Sed in quam mauris. Praesent dolor risus, aliquam eu nulla eget, semper porta dolor. Curabitur ut diam feugiat, tristique libero at, suscipit nunc.</p>
 </section>
 
+<!-- todo: add paragrpah and cta buttons -->
+<!-- <p><b>Follow us on social media to keep up with the latest ELEMENTS updates : )</b></p> -->
+
 <!-- ## Pages
 
 <content class="grid md:grid-cols-2 gap-4">

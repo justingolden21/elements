@@ -135,6 +135,20 @@
         -ms-user-select: none; /* IE10+/Edge */
         user-select: none; /* Standard */
     }
+
+    /*rules images*/
+    .hide {
+        opacity: 0;
+        transform:translate3d(0,-50%,0);
+        -webkit-transform:translate3d(0,-50%,0);
+    }
+    .show {
+        opacity: 1;
+        transform:translateZ(0);
+        -webkit-transform:translateZ(0);
+        transition: all 0.5s;
+    }
+
 }
 
 /*  - {name: "Fire", value: "#ed1b31"}

@@ -9,12 +9,6 @@ backLink: false
 {:.lead}
 Minimal boilerplate for [Jekyll](https://jekyllrb.com/) sites and [Tailwind CSS](https://tailwindcss.com/). -->
 
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script> -->
-
-<!-- <img src="assets/img/animated cardback.svg" class="w-32"> -->
-
-
-
 <!-- arrow to scroll to top, accent underline to show page vertical progress -->
 
 <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d() -->
@@ -108,7 +102,7 @@ Minimal boilerplate for [Jekyll](https://jekyllrb.com/) sites and [Tailwind CSS]
 
 #hero-text {
     animation: clipIn 2.5s linear;
-    animation-delay: 1.5s;
+    /*animation-delay: 1s;*/
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     animation-fill-mode: forwards;
 }
@@ -232,46 +226,46 @@ https://tailwindcomponents.com/component/toggle-switch
 
   <div class="flex md:flex-row flex-col items-start">
     <div class="md:w-1/2 max-w-xl">
-        <img src="assets/img/gameplay/trackers_clips.png">
+        <img class="rules-img hide" src="assets/img/gameplay/trackers_clips.svg">
     </div>
     <div class="md:w-1/2 md:pl-4 flex flex-col">
-        <p><b>Life & Gems &mdash; The Setup</b></p>
+        <p><b>Life and Gems</b></p>
         <p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">E</b>ach player starts with 20 life and 0 gems. If you reach 20 gems, you win the game. If you run out of life, you lose the game. Be the last one standing or the first to 20 gems to claim victory.</p>
     </div>
   </div>
   <div class="flex md:flex-row flex-col items-start">
     <div class="md:w-1/2 md:pl-4 flex flex-col">
-        <p><b>All Four Elements &mdash; The Basics</b></p>
+        <p><b>The Four Elements</b></p>
         <p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">T</b>he Elements deck is a deck of 80 spells. There are four elements: fire, water, gem, and electric. Fire spells deal damage. Water spells heal damage. Gem spells craft gems. Electric spells counter other spells. Master the elements to emerge victorious. Each spell has a power and a target. The power determines the size of the effect, and the target determines who is affected.</p>
     </div>
     <div class="md:w-1/2 max-w-xl">
-        <img src="assets/img/gameplay/all_element_types_2by2.png">
+        <img class="rules-img hide" src="assets/img/gameplay/all_elements.svg">
     </div>
   </div>
   <div class="flex md:flex-row flex-col items-start">
     <div class="md:w-1/2 max-w-xl">
-        <img src="assets/img/gameplay/mechanics_example.png">
+        <img class="rules-img hide" src="assets/img/gameplay/mechanics.svg">
     </div>
     <div class="md:w-1/2 md:pl-4 flex flex-col">
-        <p><b>Combining and Overpowering &mdash; The Mechanics</b></p>
+        <p><b>Combining and Overpowering</b></p>
         <p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">Y</b>ou can combine and overpower spells of the same element type. You may combine multiple spells of the same element into a single spell. When doing this, combine their power and select any target from among those spells. You may overpower a spell by responding immediately after it was cast by casting another spell of the same element type and greater power. This negates the previous spell and casts your spell.</p>
     </div>
   </div>
   <div class="flex md:flex-row flex-col items-start">
     <div class="md:w-1/2 md:pl-4 flex flex-col">
-        <p><b>The Round &mdash; The Game Structure</b></p>
+        <p><b>Round Structure</b></p>
         <p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">E</b>ach round, players select spells, then take turns casting one spell per turn or passing the turn. When all players have passed the turn in a row, the round ends and a new round begins. Rounds continue until a player wins the game. <br><br> During selection, each player sets aside their previous hand, then draws 4 cards. They chose 2 to keep and 2 to pass (clockwise). Players then combine these cards with their previous hand, and discard down to 4 cards. After selection, players cast their spells. Each player may cast up to one spell per turn.</p>
     </div>
     <div class="md:w-1/2 max-w-xl">
-        <img src="assets/img/gameplay/keep2_pass2_transparent.png">
+        <img class="rules-img hide" src="assets/img/gameplay/keep_pass.svg">
     </div>
   </div>
   <div class="flex md:flex-row flex-col items-start">
     <div class="md:w-1/2 max-w-xl">
-        <img src="assets/img/gameplay/great_spells.png">
+        <img class="rules-img hide" src="assets/img/gameplay/great_spells.svg">
     </div>
     <div class="md:w-1/2 md:pl-4 flex flex-col">
-        <p><b>Great Spells &mdash; The Finishers</b></p>
+        <p><b>Great Spells</b></p>
         <p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">A</b>fter selection, players can elect to purchase a Great Spell for 8 gems. A player can only purchase one Great Spell per game. Great Spells do not take up hand space.</p>
     </div>
   </div>
@@ -279,7 +273,6 @@ https://tailwindcomponents.com/component/toggle-switch
   <details class="text-sm font-thin"><summary>Footnotes</summary> Determining who goes first: Randomly determine the starting player for the first round. Future rounds start with the first player to pass.<br><br>Discarding: players secretly discard, then reveal their discarded cards.<br><br>Running out of cards: If the deck runs out of cards, shuffle the discard pile into the deck.<br><br>Ties: If multiple players reach 20 gems at the same time, the player with the greatest gem total wins. If there is a tie, the player with the greatest life wins. If there is a tie, the current player wins. If multiple players reach 0 life at the same time, players lose clockwise starting with the caster.<br><br>Priority for responding to spells: priority for responding to spells goes clockwise starting from the caster. If a player responds, priority for responding to that goes clockwise from the player who cast the response. Spells can only affect the most recently cast spell.<br><br>Great Spells: Great Spells are revealed. A player cannot purchase a Great Spell another player controls. Upon casting a Great Spell, the player then returns it to the center. If a player loses the game, their Great Spell returns to the center. Priority for purchasing a Great Spell goes clockwise starting with the player who will start the round (the player who passed first).</details>
 </section>
 
-<!-- todo: use vector images instead of raster -->
 <!-- todo: animate other diagrams on scroll -->
 
 <section id="design" class="mx-4">
@@ -394,7 +387,7 @@ https://tailwindcomponents.com/component/toggle-switch
     <script type="text/javascript">
     // https://stackoverflow.com/a/46985264/4907950
     const svgLocation = document.getElementById('animated-cardback').getBoundingClientRect();
-    let offsetToTriggerAnimation = svgLocation.y + svgLocation.height;
+    const offsetToTriggerAnimation = svgLocation.y + svgLocation.height;
 
     function scrollAnimTriggerCheck(evt) {
         if(window.scrollY + window.innerHeight > offsetToTriggerAnimation) {
@@ -404,6 +397,23 @@ https://tailwindcomponents.com/component/toggle-switch
     }
 
     document.addEventListener('scroll', scrollAnimTriggerCheck);
+
+    // ---- rules images ----
+
+    const ruleImgs = document.querySelectorAll('.rules-img');
+    let scrollChecks = [];
+    for(let i=0; i<ruleImgs.length; i++) {
+        const svgLoc = ruleImgs[i].getBoundingClientRect();
+        const offsetAnim = svgLoc.y + svgLoc.height;
+        scrollChecks.push(evt => {
+            if(window.scrollY + window.innerHeight > offsetAnim) {
+                ruleImgs[i].classList.remove('hide');
+                ruleImgs[i].classList.add('show');
+                document.removeEventListener('scroll', scrollChecks[i]);
+            }
+        });
+        document.addEventListener('scroll', scrollChecks[i]);
+    };
     </script>
 
 	<p class="mb-8 leading-relaxed font-thin text-left"><b class="dropcap">L</b>orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sollicitudin turpis. Integer congue faucibus ipsum, non commodo odio porta id. Praesent magna ipsum, tincidunt at viverra non, sollicitudin ut neque. Donec id erat nec erat interdum blandit vitae eget nulla. Nam porttitor condimentum ipsum id sollicitudin. Sed ac diam sed mi rutrum tincidunt. Ut vitae venenatis dolor. Quisque et interdum nunc, eu malesuada sem. Quisque volutpat dui sit amet ante pretium, quis finibus urna sagittis. Vivamus lorem justo, consequat imperdiet ullamcorper sed, tristique vel lacus. Vivamus est quam, dictum eget arcu dictum, vulputate cursus urna. Vivamus porta nisi arcu, ac tempus turpis tempus ac. Sed in quam mauris. Praesent dolor risus, aliquam eu nulla eget, semper porta dolor. Curabitur ut diam feugiat, tristique libero at, suscipit nunc.</p>

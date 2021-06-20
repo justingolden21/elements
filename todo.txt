@@ -1,0 +1,7 @@
+add playtime and players icons to top of page
+gameplay images don't fade in on mobile
+reviews before pricing
+kickstarter cta after pricing
+
+
+

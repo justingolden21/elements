@@ -1,3 +1,8 @@
+youtube link larger and below box
+kickstart btn in white
+social links in nav float right
+
+
 add playtime and players icons to top of page
 gameplay images don't fade in on mobile
 reviews before pricing
